@@ -2,11 +2,9 @@
   "themes": [
     {
       "name": "keywind",
-      "types": ["login"]
-    },
-    {
-      "name": "keywind",
-      "types": ["email"]
+      "types": [
+        "login"
+      ]
     }
   ]
 }
