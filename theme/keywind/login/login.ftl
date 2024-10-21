@@ -38,7 +38,6 @@
           label=usernameLabel
           message=kcSanitize(messagesPerField.getFirstError("username", "password"))
           name="username"
-          required=true
           type="text"
           value=(login.username)!''
         />
@@ -46,7 +45,6 @@
           invalid=messagesPerField.existsError("username", "password")
           label=msg("password")
           name="password"
-          required=true
           type="password"
         />
         <#if realm.rememberMe && !usernameEditDisabled?? || realm.resetPasswordAllowed>
