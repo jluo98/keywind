@@ -38,7 +38,6 @@
         label=totpLabel
         message=kcSanitize(messagesPerField.get("totp"))
         name="otp"
-        required=true
         type="text"
       />
       <@buttonGroup.kw>

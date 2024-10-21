@@ -4,7 +4,6 @@
 <#import "components/atoms/button-group.ftl" as buttonGroup>
 <#import "components/atoms/checkbox.ftl" as checkbox>
 <#import "components/atoms/form.ftl" as form>
-<#import "components/molecules/password-commons.ftl" as passwordCommons>
 
 <@layout.registrationLayout script="dist/recoveryCodes.js"; section>
   <#if section="header">
@@ -55,7 +54,6 @@
           required="required"
           x\-ref="confirmationCheck"
         />
-        <@passwordCommons.logoutOtherSessions/>
         <@buttonGroup.kw>
           <#if isAppInitiatedAction??>
             <@button.kw color="primary" type="submit">

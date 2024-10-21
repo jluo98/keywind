@@ -4,7 +4,6 @@
 <#import "components/atoms/checkbox.ftl" as checkbox>
 <#import "components/atoms/form.ftl" as form>
 <#import "components/atoms/input.ftl" as input>
-<#import "components/molecules/password-commons.ftl" as passwordCommons>
 
 <@layout.registrationLayout
   displayMessage=!messagesPerField.existsError("password", "password-confirm")
@@ -28,7 +27,6 @@
         invalid=messagesPerField.existsError("password", "password-confirm")
         label=msg("passwordNew")
         name="password-new"
-        required=true
         type="password"
       />
       <@input.kw
@@ -37,10 +35,8 @@
         label=msg("passwordConfirm")
         message=kcSanitize(messagesPerField.get("password-confirm"))
         name="password-confirm"
-        required=true
         type="password"
       />
-      <@passwordCommons.logoutOtherSessions/>
       <#if isAppInitiatedAction??>
         <@checkbox.kw
           checked=true

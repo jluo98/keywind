@@ -4,11 +4,7 @@
 <#import "components/atoms/form.ftl" as form>
 <#import "components/atoms/input.ftl" as input>
 
-<@layout.registrationLayout 
-  displayMessage=!messagesPerField.existsError('recoveryCodeInput')
-  ; 
-  section
->
+<@layout.registrationLayout; section>
   <#if section="header">
     ${msg("auth-recovery-code-header")}
   <#elseif section="form">
@@ -16,9 +12,7 @@
       <@input.kw
         autocomplete="off"
         autofocus=true
-        invalid=messagesPerField.existsError('recoveryCodeInput')
         label=msg("auth-recovery-code-prompt", recoveryAuthnCodesInputBean.codeNumber?c)
-        message=kcSanitize(messagesPerField.getFirstError('recoveryCodeInput'))?no_esc
         name="recoveryCodeInput"
         type="text"
       />

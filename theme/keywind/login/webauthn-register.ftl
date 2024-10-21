@@ -1,7 +1,6 @@
 <#import "template.ftl" as layout>
 <#import "components/atoms/button.ftl" as button>
 <#import "components/atoms/button-group.ftl" as buttonGroup>
-<#import "components/molecules/password-commons.ftl" as passwordCommons>
 
 <@layout.registrationLayout script="dist/webAuthnRegister.js"; section>
   <#if section="title">
@@ -17,7 +16,6 @@
         <input name="error" type="hidden" x-ref="errorInput" />
         <input name="publicKeyCredentialId" type="hidden" x-ref="publicKeyCredentialIdInput" />
         <input name="transports" type="hidden" x-ref="transportsInput" />
-        <@passwordCommons.logoutOtherSessions/>
       </form>
       <@buttonGroup.kw>
         <@button.kw @click="registerSecurityKey" color="primary" type="submit">

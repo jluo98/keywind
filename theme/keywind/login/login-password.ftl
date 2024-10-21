@@ -20,7 +20,6 @@
         label=msg("password")
         message=kcSanitize(messagesPerField.get("password"))?no_esc
         name="password"
-        required=true
         type="password"
       />
       <#if realm.resetPasswordAllowed>

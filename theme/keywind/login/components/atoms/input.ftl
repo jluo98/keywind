@@ -33,16 +33,14 @@
           :type="show ? 'text' : 'password'"
 
           <#list rest as attrName, attrValue>
-            <#if attrValue!="">
-              ${attrName}="${attrValue}"
-            </#if>
+            ${attrName}="${attrValue}"
           </#list>
         >
         <button
           @click="show = !show"
           aria-controls="${name}"
           :aria-expanded="show"
-          class="absolute text-secondary-400 right-3 top-3"
+          class="absolute text-secondary-400 right-3 top-3 sm:top-2"
           type="button"
         >
           <div x-show="!show">
@@ -67,9 +65,7 @@
         type="${type}"
 
         <#list rest as attrName, attrValue>
-          <#if attrValue!="">
-            ${attrName}="${attrValue}"
-          </#if>
+          ${attrName}="${attrValue}"
         </#list>
       >
     </#if>
